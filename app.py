@@ -8,7 +8,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("🔧 Prédiction de l’état de la valve")
+st.title(" Prédiction de l’état de la valve")
 
 st.write("""
 Cette application permet de prédire l’état de la valve  
@@ -35,7 +35,7 @@ cycle_id = st.number_input(
 if st.button("Prédire l'état de la valve"):
 
     if cycle_id not in data.index:
-        st.error("❌ Cycle non trouvé dans les données.")
+        st.error(" Cycle non trouvé dans les données.")
     else:
         
         X = data.loc[[cycle_id]]
@@ -53,6 +53,6 @@ if st.button("Prédire l'état de la valve"):
         st.subheader("Résultat")
 
         if pred == 1:
-            st.success(f"✅ Valve OPTIMALE\n\nProbabilité : {proba:.2f}")
+            st.success(f" Valve OPTIMALE\n\nProbabilité : {proba:.2f}")
         else:
-            st.error(f"❌ Valve NON OPTIMALE\n\nProbabilité : {proba:.2f}")
+            st.error(f" Valve NON OPTIMALE\n\nProbabilité : {proba:.2f}")
