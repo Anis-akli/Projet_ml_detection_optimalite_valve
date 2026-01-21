@@ -49,6 +49,24 @@ Toutes les données brutes et intermédiaires se trouvent dans le dossier `data/
 Tous les scripts de traitement, de feature engineering et d’entraînement
 se trouvent dans le dossier `src/` :
 
+- `PS1_script.ipynb`  
+  → Analyse des données ps1 et extraction de features les plus utiles
+
+- `PSI_script.ipynb`  
+  → Analyse des données de PS2 jusqu'a PS6 et extraction des statistiques par cycle  pour la pression  
+
+- `VS1_script.ipynb`  
+  → Analyse des données de VS1 et extraction de features les plus utiles
+
+- `EPS1_script.ipynb`  
+  → Analyse des données de EPS1 et extraction de features les plus utiles
+
+- `FS_script.ipynb`  
+  → Analyse des données des deux fihcier FS1 et FS2 et extraction de features les plus utiles
+
+- `TS_script.ipynb`  
+  → Analyse des données des quatre fihcier TS1-TS4 et extraction de features les plus utiles
+
 - `feature_engineering.py`  
   → extraction des statistiques par cycle  
 
@@ -58,17 +76,23 @@ se trouvent dans le dossier `src/` :
 - `Regression_logistic.ipynb`  
   → entrainement du model Regression logistic
 
-- `PSI_script.ipynb`  
-  → extraction des statistiques par cycle  pour la pression  
+- `SVM.ipynb`  
+  → entrainement du model SVM
 
----
-Tous les modele, entraîner se trouvent dans le dossier `modele/` :
+- `KNN.ipynb`  
+  → entrainement du model KNN 
 
-## Comment exécuter le projet (avec Docker – recommandé)
+- `dataset_final.csv`  
+  → c'est notre dataset_final avec toutes features extraite
 
-Ce projet est fourni sous forme d’une archive `.zip` contenant un environnement Docker
+- `app.py`  
+  → notre fichier pour l'interface streamlit
 
----
+- `dataset_streamlit.csv`  
+  → dataset utilisé pour la demo de notre interface pour la prediction
+
+- `svm_model.pkl`  
+  → notre model svm qui a était utilisé pour notre interface
 
 ###  Prérequis
 
@@ -94,8 +118,6 @@ Si l’utilisateur souhaite lancer directement l’application web sans passer p
 ```bash
 streamlit run app.py
 puis lancer dans un navigateur : http://localhost:8501
-
-Exécuter les tests unitaires
 
 Exécuter les tests unitaires
 
