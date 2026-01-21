@@ -111,13 +111,41 @@ Depuis la racine du projet (là où se trouve le fichier `Dockerfile`) :
 docker build -t valve-ml-app .
 docker run -p 8501:8501 valve-ml-app
 
-### 4️⃣ Lancer l’application Streamlit (sans Docker – optionnel)
+# Projet ML - Streamlit App
 
-Si l’utilisateur souhaite lancer directement l’application web sans passer par Docker :
+## Description
+Ce projet contient une application Streamlit pour visualiser et tester notre modèle ML.  
 
+## Prérequis
+- Docker Desktop installé (Windows, Linux ou Mac)
+- (Optionnel) Python 3.10+ pour exécuter localement sans Docker
+
+## Instructions pour lancer avec Docker
+
+1. Cloner le projet :
 ```bash
-streamlit run app.py
-puis lancer dans un navigateur : http://localhost:8501
+git clone <URL_DU_REPO>
+cd ml_final
+Builder l'image Docker :
+
+bash
+Copier le code
+docker build -t ml-streamlit-app .
+Lancer le conteneur :
+
+bash
+Copier le code
+docker run -p 8501:8501 -v "$(pwd)/dataset_streamlit.csv:/app/dataset_streamlit.csv" ml-streamlit-app
+Sur Windows PowerShell, utiliser :
+
+powershell
+Copier le code
+docker run -p 8501:8501 -v "C:\chemin\vers\ml_final\dataset_streamlit.csv:/app/dataset_streamlit.csv" ml-streamlit-app
+Ouvrir un navigateur et aller sur :
+
+arduino
+Copier le code
+http://localhost:8501
 
 Exécuter les tests unitaires
 
