@@ -94,6 +94,9 @@ se trouvent dans le dossier `src/` :
 - `svm_model.pkl`  
   → notre model svm qui a était utilisé pour notre interface
 
+- `scaler.pkl`  
+  → c'est notre model pour faire le scalling
+
 ###  Prérequis
 
 L’utilisateur doit uniquement avoir :
