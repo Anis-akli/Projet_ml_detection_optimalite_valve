@@ -131,23 +131,14 @@ git clone <URL_DU_REPO>
 cd ml_final
 Builder l'image Docker :
 
-bash
-Copier le code
 docker build -t ml-streamlit-app .
 Lancer le conteneur :
 
-bash
-Copier le code
 docker run -p 8501:8501 -v "$(pwd)/dataset_streamlit.csv:/app/dataset_streamlit.csv" ml-streamlit-app
 Sur Windows PowerShell, utiliser :
-
-powershell
-Copier le code
 docker run -p 8501:8501 -v "C:\chemin\vers\ml_final\dataset_streamlit.csv:/app/dataset_streamlit.csv" ml-streamlit-app
 Ouvrir un navigateur et aller sur :
 
-arduino
-Copier le code
 http://localhost:8501
 
 Exécuter les tests unitaires
